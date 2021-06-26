@@ -11,7 +11,7 @@ server.addService(recipe.RecipeService.service, {
             pid: process.pid
         });
     },
-    getReciper: (call, cb) => {
+    getRecipe: (call, cb) => {
         if (call.request.id !== 42) {
             return cb(new Error(`unkown recipe ${call.request.id}`));
         }
